@@ -25,18 +25,12 @@ jobs:
       - name: Use Node.js
         uses: actions/checkout@main             
       - run: npm install
-      - run: npx resumed render resume.json --theme jsonresume-theme-orbit-original
-      - run: ls -la
+      - run: npx resumed render resume.json --theme jsonresume-theme-orbit-original      
       - run: rm -rf index.html
       - run: mv resume.html index.html
-      - run : ls -la
-      - name: Setup Pages
-        uses: actions/configure-pages@main
-      - name: Upload
-        uses: actions/upload-artifact@main
         with:
           name: test
-          path: ${{ github.workspace }}/index.html
+          path: index.html
           overwrite: true
       
 
