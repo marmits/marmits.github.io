@@ -27,3 +27,4 @@ jobs:
       - run: npm install
       - run: npx resumed render resume.json --theme jsonresume-theme-orbit-original
       - run: mv resume.html index.html
+      - run : ls -la
