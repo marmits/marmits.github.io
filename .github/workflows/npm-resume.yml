@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: test
-          path: /index.html
+          path: index.html
           overwrite: true
 
           
