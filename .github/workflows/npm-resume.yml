@@ -49,9 +49,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref }}
+          persist-credentials: false
           fetch-depth: 0
-          token: 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
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -78,8 +77,8 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: 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
-          force_with_lease: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
           
           
      
