@@ -11,34 +11,74 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  
+permissions:                    # Global permissions configuration starts here
+  contents: write                # 'read' access to repository contents
+  pull-requests: write   
 
+  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  job_1:
-    # The type of runner that the job will run on
+  test:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    strategy:
+      matrix:
+        node: [10, 12, 14]
+    name: Test on Node.js ${{ matrix.node }}
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Use Node.js
-        uses: actions/checkout@main             
-      - run: npm install
-      - run: npx resumed render resume.json --theme jsonresume-theme-orbit-original
-      - run: ls -la
-      - run: rm -rf index.html
-      - run: mv resume.html index.html
-      - run : ls -la
-      - name: Setup Pages
-        uses: actions/configure-pages@main
-      - name: Upload
-        uses: actions/upload-artifact@main
-        with:
-          name: test
-          path: index.html
-          overwrite: true
-      
+      - name: Checkout
+        uses: actions/checkout@v2
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install
+        run: npm ci
+
+      - name: Test
+        run: npm test
+
+  release:
+    needs: test
+    runs-on: ubuntu-latest
+    name: Release
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install
+        run: npm install
+
+      - name: Install resume
+        run: npx resumed render resume.json --theme jsonresume-theme-orbit-original
+
+      - name: remove index.html
+        run: rm -rf index.html
+
+      - name: create index
+        run: mv resume.html index.html
+
+      - name: Commit files
+        run: |
+          git config --local user.email "geoffroy.stolaric@gmail.com"
+          git config --local user.name "marmits"
+          git add index.html
+          git commit -a -m "Add changes"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           
           
+     
