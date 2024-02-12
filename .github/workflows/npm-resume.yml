@@ -23,7 +23,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Use Node.js
-        uses: actions/checkout@v4             
+        uses: actions/checkout@main             
       - run: npm install
       - run: npx resumed render resume.json --theme jsonresume-theme-orbit-original
       - run: ls -la
@@ -31,9 +31,9 @@ jobs:
       - run: mv resume.html index.html
       - run : ls -la
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@main
       - name: Upload
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@main
         with:
           name: test
           path: index.html
