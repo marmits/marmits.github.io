@@ -60,4 +60,14 @@ jobs:
 
       - name: create index
         run: mv resume.html index.html
+
+      - name: Commit files
+        run: |
+          git config --local user.email "marmits@github.com"
+          git config --local user.name "marmits"
+          git commit -m "Add changes" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
      
