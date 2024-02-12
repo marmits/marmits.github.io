@@ -27,19 +27,7 @@ jobs:
       - run: npm install
       - run: npm run build --if-present
       - run: npm test
-      - run: npx resumed render resume.json --theme jsonresume-theme-orbit-original
-      - run: ls -la
-      - run: rm -rf index.html
-      - run: mv resume.html index.html
-      - run : ls -la
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Upload
-        uses: actions/upload-artifact@v4
-        with:
-          name: test
-          path: index.html
-          overwrite: true
+      
 
           
           
