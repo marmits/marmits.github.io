@@ -15,47 +15,23 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  test:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    strategy:
+      matrix:
+        node: [10, 12, 14]
+    name: Test on Node.js ${{ matrix.node }}
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Use Node.js
-        uses: actions/checkout@v4             
-      - run: npm install
-      - run: npx resumed render resume.json --theme jsonresume-theme-orbit-original
-      - run: ls -la
-      - run: rm -rf index.html
-      - run: mv resume.html index.html
-      
-  deploy:
-    # Add a dependency to the build job
-    needs: build
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
-
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    # Specify runner + deployment step
-    runs-on: ubuntu-latest
-    steps:
-      - name: Upload
-        uses: actions/upload-artifact@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
         with:
-          name: test
-          path: index.html
-          overwrite: true
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
+          node-version: ${{ matrix.node }}
 
-          
-          
+      - name: Install
+        run: npm ci
+
+      - name: Test
+        run: npm test
