@@ -73,6 +73,7 @@ jobs:
         run: |
           git config --local user.email "geoffroy.stolaric@gmail.com"
           git config --local user.name "marmits"
+          git add index.html
           git commit -a -m "Add changes"
       - name: Push changes
         uses: ad-m/github-push-action@master
