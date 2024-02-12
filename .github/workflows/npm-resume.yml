@@ -35,3 +35,29 @@ jobs:
 
       - name: Test
         run: npm test
+
+  release:
+    needs: test
+    runs-on: ubuntu-latest
+    name: Release
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install
+        run: npm install
+
+      - name: Install resume
+        run: npx resumed render resume.json --theme jsonresume-theme-orbit-original
+
+      - name: remove index.html
+        run: rm -rf index.html
+
+      - name: create index
+        run: mv resume.html index.html
+     
