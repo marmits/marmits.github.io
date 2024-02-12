@@ -78,7 +78,7 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.PAT_TOKEN }}
+          github_token: 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
           force_with_lease: true
           
           
