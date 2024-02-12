@@ -36,7 +36,7 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: test
-          path: $GITHUB_WORKSPACE/index.html
+          path: ${{ github.workspace }}/index.html
           overwrite: true
       
 
