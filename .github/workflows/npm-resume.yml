@@ -67,8 +67,8 @@ jobs:
       - name: Display event name 
         run: echo "github.event_name=${{ github.event_name }}"
 
-      - name: remove index.html
-        run: rm -rf index.html
+      #- name: remove index.html
+      #  run: rm -rf index.html
 
       - name: create index
         run: mv resume.html index.html
