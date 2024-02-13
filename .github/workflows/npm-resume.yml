@@ -15,12 +15,19 @@ on:
 permissions:                    # Global permissions configuration starts here
   contents: write                # 'read' access to repository contents
   pull-requests: write   
+  id-token: write
+
+
 
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   test:
+    environment:
+     name: github-pages
+     url: ${{ steps.deployment.outputs.page_url }}
+  
     runs-on: ubuntu-latest
     strategy:
       matrix:
