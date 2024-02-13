@@ -69,7 +69,7 @@ jobs:
       - name: Display event name 
         run: echo "github.event_name=${{ github.event_name }}"
         
-      
+    
 
       - name: create index
         run: mv resume.html index.html
@@ -78,7 +78,7 @@ jobs:
         run: |
           it config --global user.name "marmits"
           git config --global user.email "geoffroy.stolaric@gmail.com"
-          git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+          git commit -a -m "add"
           git push
 
           
