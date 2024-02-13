@@ -66,15 +66,10 @@ jobs:
       - name: remove index.html
         run: rm -rf index.html
 
-      - name: Commit files remove
-        run: |
-          git config --local user.email "geoffroy.stolaric@gmail.com"
-          git config --local user.name "marmits"
-          git commit -a -m "Add changes"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Display event name 
+        run: echo "github.event_name=${{ github.event_name }}"
+        
+    
 
       - name: create index
         run: mv resume.html index.html
@@ -85,7 +80,6 @@ jobs:
           git config --local user.name "marmits"
           git add index.html
           git commit -m "Add changes"
-          git push
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
