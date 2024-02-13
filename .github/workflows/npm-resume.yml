@@ -67,8 +67,8 @@ jobs:
       - name: Display event name 
         run: echo "github.event_name=${{ github.event_name }}"
 
-      - name: remove index.html
-        run: rm -rf index.html
+      #- name: remove index.html
+      #  run: rm -rf index.html
 
 
 
@@ -79,7 +79,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v1
         with:
-          path: './cv'
+          path: '.'
 
       
   deploy-coverage:
