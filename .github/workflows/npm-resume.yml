@@ -66,6 +66,9 @@ jobs:
       - name: remove index.html
         run: rm -rf index.html
 
+      - name: test
+        run: echo ${DIRECTORY_PROJECT}
+
       - name: Commit files remove
         run: |
           git config --local user.email "geoffroy.stolaric@gmail.com"
