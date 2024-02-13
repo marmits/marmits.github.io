@@ -76,11 +76,12 @@ jobs:
 
       - name: Commit files add
         run: |
-          git config --global user.name "marmits"
-          git config --global user.email "geoffroy.stolaric@gmail.com"
-          git commit -a -m "add"
-          git push
-
+          git add index.html
+          git commit -m "Add changes"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           
           
      
