@@ -67,7 +67,7 @@ jobs:
         run: rm -rf index.html
 
       - name: test
-        run: echo ${{ GITHUB_WORKSPACE }}
+        run: echo $GITHUB_WORKSPACE
 
       - name: Commit files remove
         run: |
