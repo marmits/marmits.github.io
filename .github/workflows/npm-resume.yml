@@ -76,6 +76,8 @@ jobs:
 
       - name: Commit files add
         run: |
+          git config --local user.email "geoffroy.stolaric@gmail.com"
+          git config --local user.name "marmits"
           git add index.html
           git commit -m "Add changes"
       - name: Push changes
