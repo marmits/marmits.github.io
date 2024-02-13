@@ -76,7 +76,7 @@ jobs:
 
       - name: Commit files add
         run: |
-          it config --global user.name "marmits"
+          git config --global user.name "marmits"
           git config --global user.email "geoffroy.stolaric@gmail.com"
           git commit -a -m "add"
           git push
