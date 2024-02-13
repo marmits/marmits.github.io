@@ -17,17 +17,11 @@ permissions:                    # Global permissions configuration starts here
   pull-requests: write   
   id-token: write
 
-
-
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  test:
-    environment:
-     name: github-pages
-     url: ${{ steps.deployment.outputs.page_url }}
-  
+  test: 
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -86,12 +80,10 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
    
 
       - name: create index
         run: mv resume.html index.html
-
       
       - name: Commit files add
         if: github.event_name == 'push'
@@ -105,9 +97,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v3 # or specific "vX.X.X" version tag for this action
+
 
           
           
