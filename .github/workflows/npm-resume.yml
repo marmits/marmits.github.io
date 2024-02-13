@@ -70,7 +70,7 @@ jobs:
       - name: remove index.html
         run: rm -rf index.html
 
-        - name: create index
+      - name: create index
         run: mv resume.html index.html
 
       - name: Upload artifact
