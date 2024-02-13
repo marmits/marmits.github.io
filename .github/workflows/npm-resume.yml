@@ -73,7 +73,7 @@ jobs:
 
 
       - name: create index
-        run: mv resume.html cv/index.html
+        run: mv resume.html index.html
 
       - name: Upload artifact
         if: github.ref == 'refs/heads/main'
