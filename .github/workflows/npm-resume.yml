@@ -68,11 +68,12 @@ jobs:
 
       - name: Display event name 
         run: echo "github.event_name=${{ github.event_name }}"
+        
       - name: Commit RM       
         if: github.event_name == 'push'
         run: |
-          git config --local user.email "geoffroy.stolaric@gmail.com"
-          git config --local user.name "marmits"
+          git config --global user.email "geoffroy.stolaric@gmail.com"
+          git config --global user.name "marmits"
           git commit -a -m "remove"
           git push
       - name: Push changes
@@ -87,8 +88,8 @@ jobs:
       - name: Commit files add
         if: github.event_name == 'push'
         run: |
-          git config --local user.email "geoffroy.stolaric@gmail.com"
-          git config --local user.name "marmits"
+          git config --global user.email "geoffroy.stolaric@gmail.com"
+          git config --global user.name "marmits"
           git commit -a -m "remove"
           git push
       - name: Push changes
