@@ -66,28 +66,25 @@ jobs:
       - name: remove index.html
         run: rm -rf index.html
 
-      - name: test
-        run: echo $GITHUB_WORKSPACE
-
       - name: Commit files remove
-        run: |
-          git config --local user.email "geoffroy.stolaric@gmail.com"
-          git config --local user.name "marmits"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+        uses: EndBug/add-and-commit@v9
         with:
+          author_name: marmits
+          author_email: geoffroy.stolaric@gmail.com
+          message: 'Your commit message'
+          add: '*'
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: create index
         run: mv resume.html index.html
 
       - name: Commit files add
-        run: |
-          git config --local user.email "geoffroy.stolaric@gmail.com"
-          git config --local user.name "marmits"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+        uses: EndBug/add-and-commit@v9
         with:
+          author_name: marmits
+          author_email: geoffroy.stolaric@gmail.com
+          message: 'Your commit message'
+          add: '*'
           github_token: ${{ secrets.GITHUB_TOKEN }}
           
           
