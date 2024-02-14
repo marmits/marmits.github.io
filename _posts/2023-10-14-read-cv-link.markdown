@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Test!"
 date:   2023-10-18 11:58:29
-categories: jekyll update
+categories: marmits update
 ---
 
 Consulter le [CV][marmits] JsonResume.
