@@ -5,14 +5,14 @@ permalink: /about/
 ---
 
 <style>
-nom { color: #FFFFFF; font-size: 3em; font-weight: bold }
+nom { color: #FFFFFF; font-size: 3em; font-weight: bold; text-align: center; }
 r { color: Red }
 o { color: Orange }
 g { color: Green }
 b { color: #0969DA ;font-size: 2em;}
 </style>
 
-<div style="text-align: center";><nom>GEOFFROY STOLARIC</nom></div>
+<nom>GEOFFROY STOLARIC</nom>
 
 <b>Développeur Web</b>
 
