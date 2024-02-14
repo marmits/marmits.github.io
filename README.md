@@ -1,4 +1,5 @@
-example
+Jekyll example
 =======
 
-Jekyll example Project site
+Based on Jekyll example:  
+[Jekyll example](https://github.com/jekyll/example)
