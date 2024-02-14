@@ -4,8 +4,20 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+<style>
+nom { color: #FFFFFF; font-size: 3em; font-weight: bold }
+r { color: Red }
+o { color: Orange }
+g { color: Green }
+b { color: #0969DA ;font-size: 2em;}
+</style>
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+<nom> <div style="text-align: center";>GEOFFROY STOLARIC</div></nom>
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+<b>Développeur Web</b>
+
+[codeurweb.fr][marmits-codeur]  
+[marmits.com][marmits]
+
+[marmits]:      https://marmits.com
+[marmits-codeur]:      https://codeur-web.fr
