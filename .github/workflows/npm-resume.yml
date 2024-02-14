@@ -70,8 +70,11 @@ jobs:
       #- name: remove index.html
       #  run: rm -rf index.html
 
-      
+      - name: remove directory
+        run: rm -rf cv
 
+      - name: create directory
+        run: mkdir cv
    
 
       - name: create index
