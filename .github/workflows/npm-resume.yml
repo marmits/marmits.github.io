@@ -70,16 +70,17 @@ jobs:
       #- name: remove index.html
       #  run: rm -rf index.html
 
-
+      - name: create directory
+        run: mkdir cv
 
       - name: create index
-        run: mv resume.html index.html
+        run: mv resume.html cv/index.html
 
       - name: Upload artifact
         if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v1
         with:
-          path: '.'
+          path: './cv'
 
       
   deploy-coverage:
