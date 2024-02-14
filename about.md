@@ -16,7 +16,7 @@ b { color: #0969DA ;font-size: 2em;}
 <b>Développeur Web</b>
 
 [codeurweb.fr][marmits-codeur]  
-[marmits.com][marmits]
+[marmits.com][marmits]  
 [CV JSON Resume ][cv]
 
 [marmits]:      https://marmits.com
