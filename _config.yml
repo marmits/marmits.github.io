@@ -7,7 +7,7 @@ baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "https://marmits.github.io" # the base hostname & protocol for your site
 twitter_username: marmits
 github_username:  marmits
-codeurweb_url: "https://codeur-web.fr"
+codeurweb_url: "codeur-web.fr"
 # Build settings
 markdown: kramdown
 permalink: /:year/:title:output_ext
