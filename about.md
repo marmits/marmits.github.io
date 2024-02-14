@@ -12,7 +12,7 @@ g { color: Green }
 b { color: #0969DA ;font-size: 2em;}
 </style>
 
-<nom> <div style="text-align: center";>GEOFFROY STOLARIC</div></nom>
+<div style="text-align: center";><nom>GEOFFROY STOLARIC</nom></div>
 
 <b>Développeur Web</b>
 
