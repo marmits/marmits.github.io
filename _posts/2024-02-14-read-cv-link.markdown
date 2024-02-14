@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Cv JsonResume"
-date:   2024-02-14 10:58:29
-categories: jekyll update
+title:  "Test!"
+date:   2023-11-18 09:58:29
+categories: marmits update
 ---
 
-Consulter le [CV][marmits] JsonResume.
+Consulter le [CV][marmits-cv] JsonResume.
 
 [marmits]:      https://marmits.com
 [marmits-cv]:   https://marmits.github.io/cv
