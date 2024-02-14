@@ -70,10 +70,17 @@ jobs:
       #- name: remove index.html
       #  run: rm -rf index.html
 
+      
+
    
 
       - name: create index
-        run: mv resume.html index.html
+        run: mv resume.html cv/index.html
+
+      - name: Setup Pages
+        if: github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@v3
+
 
       - name: Upload artifact
         if: github.ref == 'refs/heads/main'
