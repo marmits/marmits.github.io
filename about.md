@@ -13,11 +13,12 @@ b { color: #0969DA ;font-size: 2em;}
 </style>
 
 <nom>GEOFFROY STOLARIC</nom>
-
 <b>Développeur Web</b>
 
 [codeurweb.fr][marmits-codeur]  
 [marmits.com][marmits]
+[CV JSON Resume ][cv]
 
 [marmits]:      https://marmits.com
 [marmits-codeur]:      https://codeur-web.fr
+[cv]:      https://marmits.github.io/cv/
