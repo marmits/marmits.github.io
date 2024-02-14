@@ -2,12 +2,12 @@
 title: marmits on github
 email: geoffroy.stolaric@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Développeur fullstack PHP & Javavscript.
+  Développeur fullstack PHP & Javascript.
 baseurl: "/" # the subpath of your site, e.g. /blog/
-url: "http://marmits.github.io" # the base hostname & protocol for your site
+url: "https://marmits.github.io" # the base hostname & protocol for your site
 twitter_username: marmits
 github_username:  marmits
-
+codeurweb_url: "https://codeur-web.fr"
 # Build settings
 markdown: kramdown
 permalink: /:year/:title:output_ext
