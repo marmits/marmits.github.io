@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Profil
-permalink: /profil/
+title: About
+permalink: /about/
 ---
 
 <style>
@@ -11,7 +11,7 @@ o { color: Orange }
 g { color: Green }
 b { color: #0969DA ;font-size: 1em;}
 </style>
-<pre class="profil">
+<pre class="about">
 
 
                                                 ..
