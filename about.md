@@ -11,7 +11,7 @@ o { color: Orange }
 g { color: Green }
 b { color: #0969DA ;font-size: 1em;}
 </style>
-<b>
+<pre class="profil">
 
 
                                                 ..
@@ -102,4 +102,4 @@ b { color: #0969DA ;font-size: 1em;}
                                              .'loolooddxxdcc
                                                 .,;::cc:;'..
 
-</b>
+</pre>
