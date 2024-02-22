@@ -15,11 +15,11 @@ b { color: #0969DA ;font-size: 2em;}
 
 [WIKI][marmitswiki]  
 [CV JSON Resume ][cv]  
-[CV JSON Resume PDF ][cvpdf]  
+[CV JSON Resume PDF ][cvpdf]{:target="_blank"}
 [CV JSON Resume FICHIER ][cvjson]  
 
 
 [cv]:      https://marmits.github.io/cv/
 [cvpdf]:      https://marmits.github.io/cv/resume.pdf
-[cvjson]:      https://marmits.github.io/cv/resume.js
+[cvjson]:      https://marmits.github.io/cv/resume.json
 [marmitswiki]:      https://marmits.com/wikion
