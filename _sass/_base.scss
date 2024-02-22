@@ -133,6 +133,9 @@ code {
     background-color: #eef;
     &.about{
         background-color: #FFF;
+        @include media-query($on-palm) {
+            font-size: 0.2rem;
+        }
     }
 }
 
