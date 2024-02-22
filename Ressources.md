@@ -13,10 +13,10 @@ b { color: #0969DA ;font-size: 2em;}
 </style>
 
 
-[wiki][marmitswiki]  
-[CV JSON Resume ][cv]
-[CV JSON Resume PDF ][cvpdf]
-[CV JSON Resume FICHIER ][cvjson]
+[WIKI][marmitswiki]  
+[CV JSON Resume ][cv]  
+[CV JSON Resume PDF ][cvpdf]  
+[CV JSON Resume FICHIER ][cvjson]  
 
 
 [cv]:      https://marmits.github.io/cv/
