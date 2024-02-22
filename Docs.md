@@ -15,4 +15,4 @@ b { color: #0969DA ;font-size: 2em;}
 
 [WIKI][marmitswiki]{:target="_blank"}  
 
-[marmitswiki]:      https://marmits.com/wikion
+[marmitswiki]:      https://marmits.com/wiki
