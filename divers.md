@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Divers
+permalink: /divers/
 ---
 
 <style>
