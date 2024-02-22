@@ -9,7 +9,7 @@ twitter_username: marmits
 github_username:  marmits
 linkedin_username:  marmitscom
 codeurweb_url: "codeur-web.fr"
-jsonresume_url: "/cv"
+jsonresume_url: "cv"
 # Build settings
 markdown: kramdown
 permalink: /:year/:title:output_ext
