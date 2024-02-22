@@ -1,5 +1,5 @@
 # Site settings
-title: Geoffroy Stolaric
+title: Geoffroy Stolaric - Dev Web
 email: geoffroy.stolaric@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Développeur fullstack PHP & JavaScript.
@@ -9,6 +9,7 @@ twitter_username: marmits
 github_username:  marmits
 linkedin_username:  marmitscom
 codeurweb_url: "codeur-web.fr"
+jsonresume_url: "/cv"
 # Build settings
 markdown: kramdown
 permalink: /:year/:title:output_ext
