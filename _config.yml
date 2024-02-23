@@ -14,5 +14,4 @@ jsonresume_url: "cv"
 # Build settings
 markdown: kramdown
 permalink: /:year/:title:output_ext
-plugins:
-  - "jekyll-material-icon-tag"
+
