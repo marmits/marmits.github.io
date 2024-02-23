@@ -20,10 +20,10 @@ b { color: #0969DA ;font-size: 2em;}
 
 
 ### Cv Retro
-- [2020 2023 ][cv2020]{:target="_blank", :rel="nofollow"}
-- [2017 2020 ][cv2017]{:target="_blank", :rel="nofollow"}
-- [2011 2016 ][cv2012]{:target="_blank", :rel="nofollow"}
-- [2008 2010 ][cv2010]{:target="_blank", :rel="nofollow"}
+- [2020 2023 ][cv2020]{:target="_blank"}{rel="nofollow"}
+- [2017 2020 ][cv2017]{:target="_blank"}{rel="nofollow"}
+- [2011 2016 ][cv2012]{:target="_blank"}{rel="nofollow"}
+- [2008 2010 ][cv2010]{:target="_blank"}{rel="nofollow"}
 
 
 
