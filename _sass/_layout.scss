@@ -120,6 +120,10 @@
     padding-left: $spacing-unit / 2;
 }
 
+.footer-date{
+    float: none;
+}
+
 .footer-col-1 {
     width: -webkit-calc(35% - (#{$spacing-unit} / 2));
     width:         calc(35% - (#{$spacing-unit} / 2));

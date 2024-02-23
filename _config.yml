@@ -14,4 +14,3 @@ jsonresume_url: "cv"
 # Build settings
 markdown: kramdown
 permalink: /:year/:title:output_ext
-year: :year
