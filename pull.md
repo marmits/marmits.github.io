@@ -32,7 +32,7 @@ b { color: #0969DA ;font-size: 2em;}
 [cvjson]:      https://marmits.github.io/cv/resume.json
 
 
-[cv2020]:      http://cv2020.codeur-web.fr/
-[cv2017]:      http://cv2017.codeur-web.fr/
-[cv2012]:      http://cv2012.codeur-web.fr/
-[cv2010]:      http://cv2010.codeur-web.fr/
+[cv2020]:      http://cv2020.marmits.com/
+[cv2017]:      http://cv2017.marmits.com/
+[cv2012]:      http://cv2012.marmits.com/
+[cv2010]:      http://cv2010.marmits.com/
