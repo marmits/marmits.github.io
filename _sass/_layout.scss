@@ -159,6 +159,16 @@
         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
         width:         calc(100% - (#{$spacing-unit} / 2));
     }
+    .footer-col ul li a{
+        font-size: 1.4em;
+    }
+    .footer-col-3 p.description{
+        font-size: 1.4em;
+    }
+
+    .footer-col img {
+        height:2em;
+    }
 }
 
 @include media-query($on-palm) {
@@ -168,15 +178,8 @@
         width:         calc(100% - (#{$spacing-unit} / 2));
     }
 
-    .footer-col ul li a{
-        font-size: 1.4em;
-    }
-    .footer-col-3 p.description{
-        font-size: 1.4em;
-    }
-    .footer-col-3 p img {
-        height:2em;
-    }
+    
+    
 }
 
 
