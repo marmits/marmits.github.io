@@ -5,13 +5,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          {% if site.codeurweb_url %}
-          <li><a href="https://{{ site.codeurweb_url }}">{{ site.codeurweb_url }}</a></li>
-          {% endif %}
-          {% if site.jsonresume_url %}
-          <li><a href="{{ site.url }}/{{ site.jsonresume_url }}">{{ site.jsonresume_url }}</a></li>
-          {% endif %}
+          <li><a href="mailto:{{ site.email }}"><img src="https://img.shields.io/badge/geoffroy.stolaric@gmail.com-FF0?logo=gmail" alt="gmail" ></a></li>
         </ul>
       </div>
 
@@ -22,7 +16,9 @@
       <div class="footer-col  footer-col-3">
         <p class="text description">{{ site.description }}</p>
         <p><a href="https://marmits.github.io"><img alt="Job" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgs.marmits.com%2Fresume.json&query=basics.label&label=Job" /></a></p>
-        <p><a href="https://gs.marmits.com" target="_blank"><img alt="CV / RESUME/ Geoffroy Stolaric" src="https://img.shields.io/website?url=https%3A%2F%2Fgs.marmits.com&label=cv" /></a></p>
+        {% if site.codeurweb_url %}
+          <p><a href="{{ site.url }}/{{ site.jsonresume_url }}" target="_blank"><img alt="CV / RESUME/ Geoffroy Stolaric" src="https://img.shields.io/website?url=https%3A%2F%2Fgs.marmits.com&label=cv" /></a></p>
+          {% endif %}
         {% if site.github_username %}
           <p><a href="https://github.com/{{ site.github_username }}" target="_blank"><img src="https://img.shields.io/badge/{{ site.github_username }}-grey?logo=github" alt="Github Marmits" /></a></p>
         {% endif %}
@@ -36,9 +32,10 @@
       </div>
 
       <div class="footer-col footer-date">
-       <span><i class="fa fa-map-marker"></i> Reims</span>
+
+       <p><img src="https://img.shields.io/badge/Reims-grey?logo=googlemaps" alt="Reims" ></p>
         <!-- p>1998 - {{ 'now' | date: "%Y" }}</p-->
-        <img src="https://img.shields.io/badge/1998-{{ 'now' | date: '%Y' }}-FF0" alt="" >
+        <p><img src="https://img.shields.io/badge/1998-{{ 'now' | date: '%Y' }}-FF0" alt="{{ 'now' | date: '%Y' }}" ></p>
       </div>
 
     </div>
