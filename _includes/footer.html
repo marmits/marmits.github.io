@@ -3,17 +3,9 @@
   <div class="wrapper">
 
     <div class="footer-col-wrapper">
-      <div class="footer-col  footer-col-1">
-        <ul class="contact-list">
-          <li><a href="mailto:{{ site.email }}"><img src="https://img.shields.io/badge/{{ site.email }}-FF0?logo=gmail" alt="gmail" ></a></li>
-        </ul>
-      </div>
 
-      <div class="footer-col  footer-col-2">
-        
-      </div>
 
-      <div class="footer-col  footer-col-3">
+      <div class="footer-col">
  
         <p><a href="https://marmits.github.io"><img alt="Job" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgs.marmits.com%2Fresume.json&query=basics.label&label=Job" /></a></p>
         {% if site.codeurweb_url %}
@@ -29,6 +21,9 @@
           <p><a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><img src="https://img.shields.io/badge/{{ site.twitter_username }}-grey?logo=x" alt="X Marmits" /></a></p>
         {% endif %}
         <p><a href="https://marmits.com/wiki" target="_blank"><img src="https://img.shields.io/badge/wiki-grey?logo=wikipedia" alt="Wiki Marmits" /></a></p>
+        {% if site.email %}
+          <p><a href="mailto:{{ site.email }}"><img src="https://img.shields.io/badge/{{ site.email }}-FF0?logo=gmail" alt="gmail" ></a></p>
+        {% endif %}
       </div>
 
       <div class="footer-col footer-date">
