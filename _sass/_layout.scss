@@ -140,6 +140,10 @@
     width:         calc(45% - (#{$spacing-unit} / 2));
 }
 
+.footer-col-3 p{
+    margin-bottom: 0.4em;
+}
+
 .footer-col-3 p.description{
     font-size: 1.2em;
 }
