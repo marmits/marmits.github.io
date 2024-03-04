@@ -4,7 +4,6 @@ title:  "JsonResume"
 date:   2024-02-14 09:58:29
 categories: marmits update
 ---
-
 [CV au format JsonResume.][marmits-cv]  
 
 Source :  

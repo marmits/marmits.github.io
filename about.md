@@ -12,8 +12,6 @@ g { color: Green }
 b { color: #0969DA ;font-size: 1em;}
 </style>
 <pre class="about">
-
-
                                                 ..
                                             .,lolll:,.
                                           'lolc::clooc,'..
