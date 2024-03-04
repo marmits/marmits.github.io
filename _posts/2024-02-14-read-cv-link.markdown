@@ -14,4 +14,4 @@ Source :
 [marmits]:      https://marmits.com
 [marmits-cv]:   https://marmits.github.io/cv
 [jsonresume]:   https://jsonresume.org
-cd .. git   
+
