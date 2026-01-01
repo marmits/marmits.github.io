@@ -1,42 +1,48 @@
-<footer class="site-footer">
+  <footer class="site-footer">
 
-  <div class="wrapper">
+    <div class="wrapper">
 
-    <div class="footer-col-wrapper">
+      <div class="footer-col-wrapper">
 
-      <div class="footer-col">
- 
-        <p><a href="https://marmits.github.io"><img alt="Job" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgs.marmits.com%2Fresume.json&query=basics.label&label=Job" /></a></p>
-        {% if site.jsonresume_url %}
-          <p><a href="{{ site.url }}/{{ site.jsonresume_url }}"><img alt="CV / RESUME/ Geoffroy Stolaric" src="https://img.shields.io/website?url=https%3A%2F%2Fgs.marmits.com&label=cv" /></a></p>
+        <div class="footer-col">
+  
+          <p><a href="https://marmits.github.io"><img alt="Job" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgs.marmits.com%2Fresume.json&query=basics.label&label=Job" /></a></p>
+          {% if site.jsonresume_url %}
+            <p><a href="{{ site.url }}/{{ site.jsonresume_url }}"><img alt="CV / RESUME/ Geoffroy Stolaric" src="https://img.shields.io/website?url=https%3A%2F%2Fgs.marmits.com&label=cv" /></a></p>
+            {% endif %}
+          {% if site.github_username %}
+            <p><a href="https://github.com/{{ site.github_username }}" target="_blank"><img src="https://img.shields.io/badge/{{ site.github_username }}-grey?logo=github" alt="Github Marmits" /></a></p>
           {% endif %}
-        {% if site.github_username %}
-          <p><a href="https://github.com/{{ site.github_username }}" target="_blank"><img src="https://img.shields.io/badge/{{ site.github_username }}-grey?logo=github" alt="Github Marmits" /></a></p>
-        {% endif %}
-        {% if site.linkedin_username %}
-          <p><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/{{ site.linkedin_username }}" alt="Linkedin Marmits" /></a></p>
-        {% endif %}
-        {% if site.twitter_username %}
-          <p><a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><img src="https://img.shields.io/badge/{{ site.twitter_username }}-grey?logo=x" alt="X Marmits" /></a></p>
-        {% endif %}
-        {% if site.discord_username %}
-          <p><a href="https://discord.com/channels/1337360300336349208/1337360387816816722" target="_blank"><img src='https://img.shields.io/discord/1337360300336349208?style=flat-square&logo=Discord&logoColor=%23FFF&label=marmits&labelColor=rgb(36%2C%2078%2C%20155%2C%201)' /></a></p>
-        {% endif %}
-        <p><a href="https://marmits.com/wiki" target="_blank"><img src="https://img.shields.io/badge/wiki-grey?logo=wikipedia" alt="Wiki Marmits" /></a></p>
-        {% if site.email %}
-          <p><a href="mailto:{{ site.email }}"><img src="https://img.shields.io/badge/{{ site.email }}-FF0?logo=gmail" alt="gmail" ></a></p>
-        {% endif %}
-      </div>
+          {% if site.linkedin_username %}
+            <p><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/{{ site.linkedin_username }}" alt="Linkedin Marmits" /></a></p>
+          {% endif %}
+          {% if site.twitter_username %}
+            <p><a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><img src="https://img.shields.io/badge/{{ site.twitter_username }}-grey?logo=x" alt="X Marmits" /></a></p>
+          {% endif %}
+          {% if site.discord_username %}
+            <p><a href="https://discord.com/channels/1337360300336349208/1337360387816816722" target="_blank"><img src='https://img.shields.io/discord/1337360300336349208?style=flat-square&logo=Discord&logoColor=%23FFF&label=marmits&labelColor=rgb(36%2C%2078%2C%20155%2C%201)' /></a></p>
+          {% endif %}
+          <p><a href="https://marmits.com/wiki" target="_blank"><img src="https://img.shields.io/badge/wiki-grey?logo=wikipedia" alt="Wiki Marmits" /></a></p>
+          {% if site.email %}
+            <p><a href="mailto:{{ site.email }}"><img src="https://img.shields.io/badge/{{ site.email }}-FF0?logo=gmail" alt="gmail" ></a></p>
+          {% endif %}
+        </div>
 
-      <div class="footer-col footer-date">
+        <div class="footer-col footer-date">
 
-       <p><img src="https://img.shields.io/badge/Reims-white?logo=googlemaps" alt="Reims" ></p>
-        <!-- p>1998 - {{ 'now' | date: "%Y" }}</p-->
-        <p><img src="https://img.shields.io/badge/1998-{{ 'now' | date: '%Y' }}-FF0" alt="{{ 'now' | date: '%Y' }}" ></p>
+        <p><img src="https://img.shields.io/badge/Reims-white?logo=googlemaps" alt="Reims" ></p>
+          <!-- p>1998 - {{ 'now' | date: "%Y" }}</p-->
+          <p><img id="year-badge" alt="year"></p>
+        </div>
+
       </div>
 
     </div>
 
-  </div>
-
-</footer>
+  </footer>
+  
+<script>
+  const year = new Date().getFullYear();
+  document.getElementById("year-badge").src =
+    `https://img.shields.io/badge/1998-${year}-FF0`;
+</script>
